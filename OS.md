@@ -1,12 +1,5 @@
-Disclaimer: These notes have been taken from a variety of sources, namely:
-1. Operating Systems: Three Easy Pieces
-by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau
-2. Udacity's course on Operating Systems
-
-I <b>donot</b> own any of this content.
-
-
 <b>Monolithic OS:</b>
+
 Earliest OS's had this design.
 Everything that a particular application or hardware will require was already a part of the operating system.
 
