@@ -9,8 +9,8 @@ Suppose we have a free list that contains 2 segments of 10 bytes each. In this c
 
 From the 3rd case, suppose we have a request for a single byte of memory. 
 An action called <b>splitting</b> will happen.
-1. <b>Splitting:</b> Allocator finds a free chunk of memory that can satisfy the request and split it into two. The 1st chunk will be returned to the caller; the 2nd chunk will remain on the list.
-2. <b>Coalescing:</b> Another mechanism used by allocators.
+	1. <b>Splitting:</b> Allocator finds a free chunk of memory that can satisfy the request and split it into two. The 1st chunk will be returned to the caller; the 2nd chunk will remain on the list.
+	2. <b>Coalescing:</b> Another mechanism used by allocators.
 Sample scenario:
 - Suppose we start out with a free list that has 3 nodes. At each node, there's 10 bytes each of memory available. The middle node is in use. The other 2 nodes (at the start and end of the free list) are free.  F->U->F (What the list looks like. F is free, U is memory-in-use)
 - Suppose the node in the middle gets freed. So, we now have 3 nodes with 10 bytes each, all of which can be used. Even though the entire heap is now free, it's seemingly divided into 3 chunks of 10 bytes each.
